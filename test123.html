@@ -1,0 +1,31 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Random Text Display</title>  
+<script>  
+// 定义一个包含文字的数组  
+const textList = ["Hello, World!", "Welcome to my page!", "Click again for a new message!", "Enjoy your stay!", "This is fun, isn't it?"];  
+  
+// 当文档加载完成后执行  
+document.addEventListener('DOMContentLoaded', function() {  
+    // 获取显示文本的元素  
+    const textElement = document.getElementById('randomText');  
+  
+    // 为整个文档添加点击事件监听器  
+    document.body.addEventListener('click', function() {  
+        // 从textList中随机选择一个元素  
+        const randomIndex = Math.floor(Math.random() * textList.length);  
+        // 更新textElement的文本为随机选择的文本  
+        textElement.textContent = textList[randomIndex];  
+    });  
+});  
+</script>  
+</head>  
+<body>  
+  
+<div id="randomText">Click anywhere to see a random message!</div>  
+  
+</body>  
+</html>
